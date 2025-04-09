@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Saira+Stencil+One&display=swap');
+
+
+/* .gemunu-libre-<uniquifier> {
+    font-family: "Gemunu Libre", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+  
+  .saira-stencil-one-regular {
+    font-family: "Saira Stencil One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  
+.montserrat-<uniquifier> {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  } */
+
+
+/* === Root Color Variables === */
+:root {
+    --primary: #EE7C00;
+    --secondary: #F4F0CF;
+    --dark: #242424;
+
+}
+
+/* === Reset & Base Styles === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: var(--secondary);
+    background-color: var(--dark);
+    line-height: 1.6;
+}
+
+
+
+
+/* === Headings & Text === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+    color: var(--secondary);
+    font-family: Saira Stencil One;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* === Buttons === */
+button {
+    font: inherit;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary);
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #d76c00;
+}
+
+.btn {
+    font-weight: 600;
+}
+
+.btn,
+.theme__btn {
+    background-color: var(--secondary);
+    color: var(--dark);
+}
+
+.btn:hover,
+.theme__btn:hover {
+    background-color: #dad7b7;
+    color: var(--dark);
+}
+
+.theme__btn_secondary {
+    background-color: var(--primary);
+    color: white;
+}
+
+.theme__btn_secondary:hover {
+    background-color: #ca6500;
+    color: white;
+}
+
+.theme__btn_lg {
+    transform: scale(1.7);
+    margin: 1rem auto;
+}
+
+
+/* ====== reusabe components ========= */
+/* ---- section ---- */
+.section {
+    padding: 2rem 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.section__head {
+    padding: 2.5rem 0;
+    text-align: center;
+}
+
+.section__head .title {
+    font-size: 75px;
+}
+.section__head .title.title__small {
+    font-size: 35px;
+}
+
+.section__foot {
+    padding: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+/* =========== Topbar =========== */
+.topbar {
+    background-color: var(--primary);
+    padding: 0;
+    margin: 0;
+}
+
+.topbar .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+.topbar .content p {
+    font-family: Gemunu Libre;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+}
+
+.topbar .content img {
+    height: 35px;
+}
+
+
+/* ========= Navbar ========== */
+.navbar {
+    background-color: var(--dark);
+}
+
+.navbar-nav {
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.navbar .nav-link {
+    color: white;
+    font-family: Gemunu Libre;
+    font-size: 16px;
+}
+
+.navbar .nav-link.active {
+    color: var(--primary);
+}
+
+.navbar__btn {
+    font-family: Saira Stencil One;
+    font-weight: 400;
+    font-size: 30px;
+}
+
+
+
+/* ============ Hero ============  */
+
+/* -- image-banner -- */
+.image__banner {
+    position: relative;
+    width: 100%;
+    height: max-content;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.banner__content {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 90%;
+}
+
+.image__banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Darken the background */
+    z-index: 0;
+}
+
+/* -- hero -- */
+
+.hero .image__banner {
+    min-height: 90vh;
+    margin-top: 1rem;
+}
+
+.hero__banner_img {
+    max-width: 90%;
+    height: auto;
+    margin-bottom: 2rem;
+    /* Space between image and text */
+}
+
+.hero__banner_title {
+    font-family: Saira Stencil One;
+    font-weight: 400;
+    color: var(--secondary);
+    font-size: 75px;
+    text-align: center;
+}
+
+.hero__banner_description {
+    font-family: Gemunu Libre;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--primary);
+}
+
+
+/* ========== spoonser section ========== */
+.sponser__section_content .sponser__banner_img {
+    width: 100%;
+}
