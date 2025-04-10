@@ -455,6 +455,7 @@ button:hover {
 
 .event__wrapper.inactive .event__card .loader .event__title {
     display: block;
+    text-wrap: nowrap;
 }
 
 .event__wrapper.inactive .loader {
