@@ -30,15 +30,47 @@
         <div class="topbar alert fade show" role="alert">
             <div class="container">
                 <div class="content">
-                    <p>UN EVENTO CREADO POR</p>
-                    <a href="greenhug.com" target="_blank">
-                        <img src="assets/images/greenhug-logo.png" alt="greenhub">
-                    </a>
+                    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon navbar__toggler"></span>
+                        <i class="fa-solid fa-bars custom__toggler"></i>
+                    </button>
+                    <div class="data">
+                        <p>UN EVENTO CREADO POR</p>
+                        <a href="greenhug.com" target="_blank">
+                            <img src="assets/images/greenhug-logo.png" alt="greenhub">
+                        </a>
+                    </div>
                 </div>
+                <div class="collapse navbar-collapse d-lg-none" id="collapsibleNavId">
+                    <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#what-amtap">¿QUÉ ES AMTAP?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#how-it-work">¿CÓMO FUNCIONA?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#venues-dates">SEDES Y FECHAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sponsers">PATROCINADORES Y ALIANZAS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">PREGUNTAS FRECUENTES FAQ</a>
+                        </li>
+
+                    </ul>
+                    <div class="d-flex my-2 my-lg-0">
+                        <a href="#" class="btn theme__btn_secondary navbar__btn">RANKING</a>
+                    </div>
+                </div>
+
             </div>
         </div>
         <!-- place navbar here -->
-        <nav class="navbar navbar-expand-md navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light d-none d-md-block">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="assets/images/amtap-logo.png" alt="Logo">
@@ -119,7 +151,7 @@
             <div class="section__body">
                 <div class="container-fluid">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-6 order-2 order-md-1">
                             <div class="reforest__left">
                                 <p class="text">INSPIRADO POR LOS MEJORES, AMTAP TOMA LO MEJOR DEL DEPORTE DE
                                     RESISTENCIA Y LO LLEVA A LA TIERRA. CADA CUBETA DE TIERRA, CADA HOYO CAVADO Y CADA
@@ -127,7 +159,7 @@
                                     RELOJ, LO QUE QUEDA NO ES SOLO SUDOR: ES UN BOSQUE EN CONSTRUCCIÓN.</p>
                             </div>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6 order-1 order-md-2">
                             <div class="reforest__right">
                                 <div class="image__card">
                                     <img src="assets/images/reforest-img.png" alt="Reforest" class="img-fluid">
@@ -146,7 +178,7 @@
                 <h2 class="title">¿CÓMO FUNCIONA?</h2>
             </div>
             <div class="section__body">
-                <div class="image__banner">
+                <div class="image__banner how__it_work-banner">
                     <!-- background video -->
                     <video autoplay muted loop class="banner__video">
                         <source src="assets/videos/how-it-works-video.mp4" type="video/mp4" />
@@ -205,15 +237,44 @@
                                 <p class="text event__venu">HORARIOS DISPONIBLES:</p>
                                 <div class="event__times">
                                     <!-- input radio buttons with label as event times  -->
-                                    <div class="event__time">
+                                    <div class="event__time inactive">
                                         <input type="radio" id="event-time-1" name="event-time" value="7:00 AM" />
                                         <label for="event-time-1">7:00 AM</label>
                                     </div>
-                                    <div class="event__time">
+                                    <div class="event__time inactive">
                                         <input type="radio" id="event-time-2" name="event-time" value="8:30 AM" />
                                         <label for="event-time-2">8:30 AM</label>
                                     </div>
-                                    <div class="event__time active">
+                                    <div class="event__time">
+                                        <input type="radio" id="event-time-3" name="event-time" value="10:00 AM" />
+                                        <label for="event-time-3">10:00 AM</label>
+                                    </div>
+                                </div>
+                                <a href="#" class="btn theme__btn event__btn">INSCRIBIRME EN ESTA SEDE</a>
+                            </div>
+                        </div>
+                        <div class="col-12 event__wrapper inactive">
+                            <div class="event__card">
+                                <img src="assets/images/event-1.png" class="img-fluid event__img" alt="event image">
+                                <h3 class="event__title">NUEVO LEÓN</h3>
+                                <div class="loader">
+                                    <h3 class="event__title">CARGANDO ...</h3>
+                                </div>
+                            </div>
+                            <div class="event__data">
+                                <p class="text event__month">JULIO 2025</p>
+                                <p class="text event__venu">HORARIOS DISPONIBLES:</p>
+                                <div class="event__times">
+                                    <!-- input radio buttons with label as event times  -->
+                                    <div class="event__time inactive">
+                                        <input type="radio" id="event-time-1" name="event-time" value="7:00 AM" />
+                                        <label for="event-time-1">7:00 AM</label>
+                                    </div>
+                                    <div class="event__time inactive">
+                                        <input type="radio" id="event-time-2" name="event-time" value="8:30 AM" />
+                                        <label for="event-time-2">8:30 AM</label>
+                                    </div>
+                                    <div class="event__time">
                                         <input type="radio" id="event-time-3" name="event-time" value="10:00 AM" />
                                         <label for="event-time-3">10:00 AM</label>
                                     </div>
@@ -234,44 +295,15 @@
                                 <p class="text event__venu">HORARIOS DISPONIBLES:</p>
                                 <div class="event__times">
                                     <!-- input radio buttons with label as event times  -->
-                                    <div class="event__time">
+                                    <div class="event__time inactive">
                                         <input type="radio" id="event-time-1" name="event-time" value="7:00 AM" />
                                         <label for="event-time-1">7:00 AM</label>
                                     </div>
-                                    <div class="event__time">
+                                    <div class="event__time inactive">
                                         <input type="radio" id="event-time-2" name="event-time" value="8:30 AM" />
                                         <label for="event-time-2">8:30 AM</label>
                                     </div>
-                                    <div class="event__time active">
-                                        <input type="radio" id="event-time-3" name="event-time" value="10:00 AM" />
-                                        <label for="event-time-3">10:00 AM</label>
-                                    </div>
-                                </div>
-                                <a href="#" class="btn theme__btn event__btn">INSCRIBIRME EN ESTA SEDE</a>
-                            </div>
-                        </div>
-                        <div class="col-12 event__wrapper inactive">
-                            <div class="event__card">
-                                <img src="assets/images/event-1.png" class="img-fluid" alt="event image">
-                                <h3 class="event__title">NUEVO LEÓN</h3>
-                                <div class="loader">
-                                    <h3 class="event__title">CARGANDO ...</h3>
-                                </div>
-                            </div>
-                            <div class="event__data">
-                                <p class="text event__month">JULIO 2025</p>
-                                <p class="text event__venu">HORARIOS DISPONIBLES:</p>
-                                <div class="event__times">
-                                    <!-- input radio buttons with label as event times  -->
                                     <div class="event__time">
-                                        <input type="radio" id="event-time-1" name="event-time" value="7:00 AM" />
-                                        <label for="event-time-1">7:00 AM</label>
-                                    </div>
-                                    <div class="event__time">
-                                        <input type="radio" id="event-time-2" name="event-time" value="8:30 AM" />
-                                        <label for="event-time-2">8:30 AM</label>
-                                    </div>
-                                    <div class="event__time active">
                                         <input type="radio" id="event-time-3" name="event-time" value="10:00 AM" />
                                         <label for="event-time-3">10:00 AM</label>
                                     </div>
@@ -293,7 +325,7 @@
             <div class="section__body">
                 <div class="swiper sponsers__slider">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="assets/images/amtap-logo.png" alt=""
+                        <div class="swiper-slide"><img src="assets/images/sponser-slider-image.png" alt=""
                                 class="sponser__slider_img"></div>
                         <div class="swiper-slide"><img src="assets/images/sponser-slider-image.png" alt=""
                                 class="sponser__slider_img"></div>
@@ -312,17 +344,19 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-6 h-100 video__slider_left">
-                                        <img src="assets/images/greenhug-logo.png" alt="greenhug"
-                                            class="video__slider_logo" />
-                                        <div class="content">
-                                            <p class="text name">JORGE LOMELÍ</p>
-                                            <p class="text designation">CEO GREENHUG</p>
+                                <div class="row video__slider_row">
+                                    <div class="col-md-6 order-2 order-md-1">
+                                        <div class="video__slider_left">
+                                            <img src="assets/images/greenhug-logo-full.png" alt="greenhug"
+                                                class="video__slider_logo" />
+                                            <div class="content">
+                                                <p class="text name">JORGE LOMELÍ</p>
+                                                <p class="text designation">CEO GREENHUG</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 h-100 video__slider_right">
-                                        <div class="video__slider_video-wrapper">
+                                    <div class="col-md-6 order-1 order-md-2">
+                                        <div class="video__slider_right">
                                             <video loop class="video__slider_video">
                                                 <source src="assets/videos/slider-video.mp4" type="video/mp4" />
                                                 Your browser does not support the video tag.
@@ -334,17 +368,19 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-6 h-100 video__slider_left">
-                                        <img src="assets/images/greenhug-logo.png" alt="greenhug"
-                                            class="video__slider_logo" />
-                                        <div class="content">
-                                            <p class="text name">JORGE LOMELÍ</p>
-                                            <p class="text designation">CEO GREENHUG</p>
+                                <div class="row video__slider_row">
+                                    <div class="col-md-6 order-2 order-md-1">
+                                        <div class="video__slider_left">
+                                            <img src="assets/images/greenhug-logo-full.png" alt="greenhug"
+                                                class="video__slider_logo" />
+                                            <div class="content">
+                                                <p class="text name">JORGE LOMELÍ</p>
+                                                <p class="text designation">CEO GREENHUG</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 h-100 video__slider_right">
-                                        <div class="video__slider_video-wrapper">
+                                    <div class="col-md-6 order-1 order-md-2">
+                                        <div class="video__slider_right">
                                             <video loop class="video__slider_video">
                                                 <source src="assets/videos/slider-video.mp4" type="video/mp4" />
                                                 Your browser does not support the video tag.
@@ -356,17 +392,19 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="container-fluid">
-                                <div class="row">
-                                    <div class="col-md-6 h-100 video__slider_left">
-                                        <img src="assets/images/greenhug-logo.png" alt="greenhug"
-                                            class="video__slider_logo" />
-                                        <div class="content">
-                                            <p class="text name">JORGE LOMELÍ</p>
-                                            <p class="text designation">CEO GREENHUG</p>
+                                <div class="row video__slider_row">
+                                    <div class="col-md-6 order-2 order-md-1">
+                                        <div class="video__slider_left">
+                                            <img src="assets/images/greenhug-logo-full.png" alt="greenhug"
+                                                class="video__slider_logo" />
+                                            <div class="content">
+                                                <p class="text name">JORGE LOMELÍ</p>
+                                                <p class="text designation">CEO GREENHUG</p>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 h-100 video__slider_right">
-                                        <div class="video__slider_video-wrapper">
+                                    <div class="col-md-6 order-1 order-md-2">
+                                        <div class="video__slider_right">
                                             <video loop class="video__slider_video">
                                                 <source src="assets/videos/slider-video.mp4" type="video/mp4" />
                                                 Your browser does not support the video tag.
@@ -391,7 +429,7 @@
                 <h2 class="title">PREGUNTAS FRECUENTES (FAQ)</h2>
             </div>
             <div class="section__body">
-                <div class="accordion" id="accordionPanelsStayOpenExample">
+                <div class="accordion faqs" id="accordionPanelsStayOpenExample">
                     <div class="accordion-item faq__item">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse"
@@ -521,7 +559,7 @@
     </main>
     <footer>
         <!-- place footer here -->
-        <div class="footer">
+        <div class="container footer__container">
             <div class="footer__left">
                 <div class="footer__socials">
                     <a href="#" class="social__link"><i class="fa-brands fa-facebook"></i></a>
