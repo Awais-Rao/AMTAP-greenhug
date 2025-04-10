@@ -3,6 +3,7 @@
         loop: true,
         grabCursor: true,
         spaceBetween: 30,
+        
         autoplay: {
           delay: 2500,
           disableOnInteraction: false,
@@ -15,7 +16,7 @@
               spaceBetween: 20,
             },
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 30,
             },
           },
