@@ -7,6 +7,7 @@
     --primary: #EE7C00;
     --secondary: #F4F0CF;
     --dark: #242424;
+    --green: #0A6D63;
     --bs-accordion-bg: var(--dark);
 
     /* --- typography --- */
@@ -71,7 +72,7 @@ button {
     transition: background-color 0.3s ease;
 }
 
-button:hover {
+button:not(.btn-close):hover {
     background-color: #d76c00;
 }
 
@@ -213,7 +214,8 @@ button:hover {
     height: 35px;
 }
 
-.topbar .navbar-toggler {
+.topbar .navbar-toggler,
+.topbar .navbar-toggler:hover {
     background: var(--primary);
     padding: 0.6rem;
     padding-top: 1rem;
@@ -407,6 +409,7 @@ button:hover {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    width: max-content;
 }
 
 .event__wrapper .event__data {
@@ -643,6 +646,309 @@ footer {
 
 .footer__logo {
     height: 45px;
+}
+
+
+
+/* =========== Modals ================== */
+
+.modal-body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow: hidden;
+  }
+    .modal-body::-webkit-scrollbar {
+    display: none;
+  }
+
+.theme__modal .modal-content {
+    background: var(--dark) !important;
+    color: white;
+    box-shadow: 0px 4px 20px 0px #0A6D63;
+    border-radius: 20px;
+    font-size: var(--small-text);
+}
+.theme__modal .btn-close{
+    filter: invert(1);
+    float: right;
+    transform: scale(0.7) translateX(10px);
+    margin-top: -10px;
+    cursor: pointer;
+    z-index: 9;
+    position: relative;
+}
+
+.modal__btn {
+    margin-top: 2rem;
+    background: var(--green);
+    color: white;
+    padding: 0.5rem 1.8rem;
+}
+
+.modal__btn:hover {
+    background: #064f47;
+    color: white;
+}
+.modal__button_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.first__modal {
+    text-align: center;
+}
+
+.modal__event_title {
+    font-size: var(--extra-large-text);
+    color: white;
+}
+
+.modal__event_price {
+    font-size: var(--medium-text);
+    color: white;
+    font-weight: 700;
+    background: var(--green);
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    width: fit-content;
+    margin: 1rem auto;
+}
+
+.modal__event_include ul {
+    list-style: none;
+}
+
+.modal__event_include ul li::before {
+    content: '-';
+    font-weight: 700;
+    margin-right: 1rem;
+}
+
+.modal__event_text {
+    font-size: 16px;
+    color: var(--primary);
+}
+
+
+
+/* --- second modal ---- */
+.second__modal{
+    text-align: center;
+}
+.modal__logo_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal__logo {
+    height: 120px;
+    margin: auto;
+}
+.modal__heading{
+    font-size: var(--medium-text);
+    text-align: center;
+    color: white;
+}
+.second__modal .modal__heading{
+    margin-bottom: 1rem;
+}
+.modal__label{
+    font-size: var(--small-text);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+.modal__select{
+    background: var(--green) !important;
+    color: white !important;
+    padding: 0.6rem 1rem !important;
+    width: max-content;
+}
+.second__modal .modal__select{
+    margin: 1.5rem auto !important;
+}
+.modal__event__data p{
+    margin: 0;
+    line-height: 180%;
+}
+
+
+.modal__input_checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    width: 20px;
+    height: 20px;
+    background-color: var(--dark);
+    border: 1px solid white;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+    margin-right: 1rem;
+}
+
+.modal__input_checkbox input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: var(--primary);
+    font-size: 28px;
+    position: absolute;
+    top: -9px;
+    left: 1px;
+    line-height: 1;
+}
+
+
+/* ----- third modal ----- */
+.third__modal .modal__select{
+    margin: 1.5rem auto !important;
+}
+
+/* -- fourth modal -- */
+.fourth__modal{
+   text-align: center;
+}
+
+
+/* -- fifth modal --  */
+.modal__input .text__input {
+    background: var(--green);
+    color: white;
+    padding: 0.3rem 0.6rem;
+    width: 100%;
+    border-radius: 8px;
+    border: none ;
+    box-shadow: none ;
+    outline: none ;
+    font-size: 15px;
+    min-height: 40px;
+}
+
+
+.modal__input .text__input:focus,
+.modal__input .text__input:active{
+    background: #064f47 !important;
+}
+
+
+/* -- sixth modal -- */
+
+.modal__input_text,
+.modal__select{
+    margin-bottom: 12px;
+}
+.modal__input_select .modal__select{
+    width: 100% !important;
+}
+/* Remove native arrow */
+.filter-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    padding-right: 2rem; /* create space for custom arrow */
+}
+
+/* Position the custom arrow using the wrapper */
+.modal__input_select {
+    position: relative;
+}
+
+/* Custom arrow */
+.modal__input_select::after {
+    content: "▼";
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 0.7rem;
+    pointer-events: none;
+}
+
+
+
+
+/* -- seventh modal -- */
+.seventh__modal .modal__heading{
+    margin-bottom: 1.5rem;
+}
+.item__price_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14%;
+    margin: 1.5rem auto;
+}
+.final__items_wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.final__items_wrapper .modal__label{
+    font-size: 16px;
+}
+
+
+.modal__terms_text{
+    font-size: 12px ;
+    text-align: center ;
+}
+.final__items_wrapper .modal__label span,
+.modal__terms_text span{
+    margin-left: 5px;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+/* --- eighth modal ---- */
+.modal__input_cvv{
+    width: max-content;
+    min-width: 200px;
+}
+
+
+
+
+/* --- success modal ---- */
+.success__modal_heading{
+    font-size: var(--extra-large-text);
+    color: var(--primary);
+    opacity: 0.6;
+}
+.modal__success_data{
+    width: 85%;
+    margin: 1.5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.modal__success_image{
+    width: 70%;
+    margin: auto;
+}
+.modal__success_message{
+    text-align: center;
+}
+
+/* -- product modal -- */
+.modal__product_desc{
+    text-align: center;
+    width: 90%;
+    font-size: 15px;
+    margin: 1rem auto 0;
+}
+
+/* -- terms modal -- */
+.modal__title.terms__title{
+    font-size: var(--section-title-font);
+    text-align: center;
+    color: var(--primary);
 }
 
 
